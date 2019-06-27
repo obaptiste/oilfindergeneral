@@ -1,0 +1,11 @@
+<!-- <p *ngIf="!oil">
+  Here is where you'll see details of any oil you click
+</p> -->
+
+<div *ngIf="selectedOil">
+  <h3> {{oil.name}}</h3>
+  <h4 *ngIf="oil.description">
+    {{oil.description}}
+  </h4>
+</div>
+
