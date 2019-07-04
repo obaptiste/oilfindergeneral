@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OilTableComponent } from './oil-table/oil-table.component';
-import { MatTableModule, MatPaginatorModule, MatSortModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MatProgressSpinnerModule, MatCardModule, MatButtonModule } from '@angular/material';
 import { OilDetailComponent } from './oil-detail/oil-detail.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import {OilTableService} from './oil-table.service';
@@ -35,6 +35,8 @@ import { environment } from '../environments/environment';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCardModule,
+    MatButtonModule,
     MatProgressSpinnerModule,
     FormsModule,
     BrowserModule,

@@ -1,3 +1,8 @@
 .full-width-table {
   width: 100%;
 }
+
+.oil_card {
+  box-sizing: border-box;
+  padding-top: 10px;
+}

@@ -7,8 +7,9 @@
 <app-oil-table></app-oil-table>
 <p>Fire stuff</p>
 <ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
+  <li class="text" *ngFor="let task of tasks | async">
+    {{task.name}}
   </li> 
 </ul>
+<button mat-raised-button color="primary">Click me</button>
 <router-outlet></router-outlet>
