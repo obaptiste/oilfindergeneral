@@ -13,6 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OilDetailComponent implements OnInit {
   dataSource: OilTableDataSource;
+  selectedOil: Oil[];
   Oil: Oil[];
   
   constructor(

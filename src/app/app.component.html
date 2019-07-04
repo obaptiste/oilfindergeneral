@@ -5,4 +5,10 @@
   </h1> 
 </div>
 <app-oil-table></app-oil-table>
+<p>Fire stuff</p>
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.name}}
+  </li> 
+</ul>
 <router-outlet></router-outlet>

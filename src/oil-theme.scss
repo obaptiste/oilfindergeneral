@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+// @import 'node_modules\@material\theme\_color-palette.scss';
+
+@include mat-core();
+
+$oil-theme-primary: mat-palette($mat-indigo);
+$oil-theme-accent: mat-palette($mat-pink, A200, A100, A400);
+$oil-theme-warn: mat-palette($mat-red);
+
+$oil-theme: mat-light-theme($oil-theme-primary, $oil-theme-accent, $oil-theme-warn);

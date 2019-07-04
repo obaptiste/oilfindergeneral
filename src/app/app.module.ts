@@ -11,12 +11,21 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import {OilTableService} from './oil-table.service';
 import { RouterModule } from '@angular/router';
 import { Http, HttpModule } from '@angular/http';
+import { OilManagerComponent } from './oil-manager/oil-manager.component';
+import { OilComponent } from './oil-table/oil/oil.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
     OilTableComponent,
-    OilDetailComponent
+    OilDetailComponent,
+    OilManagerComponent,
+    OilComponent
   ],
   imports: [
     BrowserModule,
@@ -30,11 +39,11 @@ import { Http, HttpModule } from '@angular/http';
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-    HttpModule
-    // RouterModule.forRoot([
-    //   { path: '', component:OilTableComponent },
-    //   { path: '', 'oils/:oilId', component: OilDetailComponent}
-    // ])
+    HttpModule,
+    AngularFireModule.initializeApp(environment.firebase, 'oil-manager'),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
   providers: [OilTableService],
   bootstrap: [AppComponent],

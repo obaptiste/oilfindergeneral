@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDFY0u1BZWd5TBZpXPnnaHBGNHXKzw_HF0",
+    authDomain: "oil-manager.firebaseapp.com",
+    databaseURL: "https://oil-manager.firebaseio.com",
+    projectId: "oil-manager",
+    storageBucket: "oil-manager.appspot.com",
+    messagingSenderId: "485454067270",
+    appId: "1:485454067270:web:3f9d5de19240f51a"
+  }
 };
 
 /*
