@@ -6,3 +6,7 @@
   box-sizing: border-box;
   padding-top: 10px;
 }
+
+.mat-card-header {
+  background-color: blue;
+}

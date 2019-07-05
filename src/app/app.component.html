@@ -12,4 +12,33 @@
   </li> 
 </ul>
 <button mat-raised-button color="primary">Click me</button>
+<div class="container-fluid">
+  <div style="color: blue;">
+    <h1>{{title}}</h1>
+    <h3>{{desc}}</h3>
+  </div>
+ 
+  <div style="width: 300px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="oil">Oil</label>
+        <input type="text" class="form-control"
+          placeholder="Enter content..." id="oil"
+          required [(ngModel)]="oilValue" name="oil">
+      </div>
+ 
+      <div class="btn-group">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </form>
+  </div>
+ 
+  <h2>Content from Firebase</h2>
+  <button (click)="doTheThing()">do the thing</button>
+  <div class="col-md-3">
+    <pre *ngFor="let oil of oils | async">{{oil.content}}</pre>
+  </div>
+ 
+</div>
+
 <router-outlet></router-outlet>
