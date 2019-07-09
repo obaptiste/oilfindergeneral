@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTable } from '@angular/material';
 import { OilTableDataSource, Oil } from './oil-table-datasource';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-oil-table',
@@ -17,6 +18,8 @@ export class OilTableComponent implements AfterViewInit, OnInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name', 'description'];
+
+  constructor(private router: Router){}
 
   ngOnInit() {
     this.dataSource = new OilTableDataSource();
@@ -40,6 +43,10 @@ export class OilTableComponent implements AfterViewInit, OnInit {
   onSelect(oil: Oil): void {
     this.selectedOil = oil;
     console.log('Selected Oil is: ' + oil.name)
+  }
+
+  seeDetail(oil: Oil) {
+    this.router.navigate(['/oils', oil.id])
   }
 
 }
