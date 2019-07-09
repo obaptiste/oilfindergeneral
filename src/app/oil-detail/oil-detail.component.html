@@ -3,11 +3,6 @@
 </p> -->
 <p>This is oil {{oilId}}</p>
 
-
-<div *ngIf="selectedOil">
-  <h3> {{oil.name}}</h3>
-  <h4 *ngIf="oil.description">
-    {{oil.description}}
-  </h4>
-</div>
+<a (click)="previousOil()">Back</a>
+<a (click)="nextOil()">Next</a>
 
