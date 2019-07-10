@@ -1,13 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <mat-sidenav #drawer class="sidenav" 
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Welcome to {{title}}</mat-toolbar>
+    <mat-toolbar>{{title}}</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="[ '/oiltable' ]">Oil Table</a>
+      <a mat-list-item routerLink="/oiltable">Oil Table</a>
       <a mat-list-item routerLink="/oilmanager">Oil Manager</a>
-      <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,8 +19,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>oilfinder</span>
+      <span>Oil Finder</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    Welcome to the Oil Finder
   </mat-sidenav-content>
 </mat-sidenav-container>

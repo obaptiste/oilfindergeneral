@@ -19,6 +19,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { OilOverviewComponent } from './oil-overview/oil-overview.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     OilDetailComponent,
     OilComponent,
     routingComponents,
-    NavigationComponent
+    NavigationComponent,
+    OilOverviewComponent
   ],
   imports: [
     BrowserModule,

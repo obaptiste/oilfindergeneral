@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OilTableDataSource, Oil } from '../oil-table/oil-table-datasource';
 import { OilTableService } from '../oil-table.service';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 //import { Oil } from '../oil';
 
 @Component({
@@ -13,13 +13,15 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class OilDetailComponent implements OnInit {
   dataSource: OilTableDataSource;
-  selectedOil: Oil[];
+  selectedOil: Oil;
   Oil: Oil[];
   public oilId;
   
+  
   constructor(
     private oilTableService: OilTableService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router : Router
   ) { 
   }
 
@@ -29,11 +31,18 @@ export class OilDetailComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       let id = parseInt(params.get('id'));
       this.oilId = id;
-    })
+      this.selectedOil = this.dataSource.data.find((oil) => oil.id == id) 
+      console.log(this.selectedOil.name);
+    });
   }
 
    goPrevious() {
      let previousId = this.oilId -1;
-     this.router.navigate(['/oilsa'])
+     this.router.navigate(['/oils', previousId])
    } 
+
+   goNext() {
+    let nextId = this.oilId + 1;
+    this.router.navigate(['/oils', nextId])
+  } 
 }

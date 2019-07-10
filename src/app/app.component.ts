@@ -45,6 +45,7 @@ export class AppComponent {
     this.db.collection("oils").get().subscribe((querySnapshot) => {
       querySnapshot.forEach((doc) => {
           console.log(`${doc.id} => ${doc.data()}`);
+          console.log(doc)
       });
   });
   }

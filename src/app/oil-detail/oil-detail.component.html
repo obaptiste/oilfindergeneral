@@ -3,6 +3,12 @@
 </p> -->
 <p>This is oil {{oilId}}</p>
 
-<a (click)="previousOil()">Back</a>
-<a (click)="nextOil()">Next</a>
+<div>
+  <h2>{{selectedOil.name}}</h2>
+  <p>
+    {{selectedOil.description}}
+  </p>
+
+<a (click)="goPrevious()">Back</a>
+<a (click)="goNext()">Next</a>
 
