@@ -1,12 +1,6 @@
 @import '~@angular/material/theming';
-@import "@material/drawer/mdc-drawer";
-@import "@material/list/mdc-list";
-@import "@material/image-list/mdc-image-list";
-@import "@material/ripple/mixins";
-@import "@material/typography/mdc-typography";
-@import "@material/elevation/mdc-elevation";
-
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './common';
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @include mat-core();
 
